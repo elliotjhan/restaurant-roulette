@@ -25,7 +25,6 @@ app.get('/yelp', (req, res) => {
     }
   })
   .then(data => {
-    console.log('data successfully retrieved', data);
     res.send(data.data).status(200).end();
   })
 
