@@ -4,15 +4,16 @@ export default class List {
   }
 
   generateList() {
-    fetch('https://api.yelp.com/v3/categories', {
+    fetch('http://127.0.0.1:3000/yelp', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer w6a5yOrFUI42Y7kKdWDZvCT-SSIQmRTusNSK08EOZBE7TduWBjDCji0jMnM9Gz5KAcm9BM-HY5_Q7hoKHJgWtaeyhM9gi0y87g389yLJ3FC5GxAV1neaeTTVa7BtYnYx'
       }
+    })    
+    .then(response => response.json())
+    .then(data => {
+      console.log('data successfully retrieved', data);
     })
-      .then(response => response.text())
-      .then(data => console.log(data))
   
   }
 
