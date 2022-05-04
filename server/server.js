@@ -30,12 +30,13 @@ app.get('/categories', (req, res) => {
 
 app.post('/restaurants', (req, res) => {
   let categories = req.body.categories;
+  let location = req.body.location;
   let url = 'https://api.yelp.com/v3/businesses/search?';
   axios({
     method: 'get',
     params: {
       categories,
-      location: 'LA'
+      location
     },
     url: url,
     headers: {
