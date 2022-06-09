@@ -16,23 +16,30 @@
     <script type="module" src="./assets/js/main.js" async></script>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid appContainer">
       <div class="appTitle row justify-content-start">
-        <div class="col-6 text-start">Restaurant Roulette</div>
+        <div class="col text-start">Restaurant Roulette</div>
       </div>
       <div id="inputContainer" class="row justify-content-center">
-        <select class="item col-4" name="categories" id="categories">
+        <select
+          class="categories col-10 col-sm-6 mb-3"
+          name="categories"
+          id="categories"
+          size="1"
+        >
           <option selected="true" disabled>Category</option>
         </select>
         <input
-          class="item col-2"
+          class="item col-6 col-sm-3"
           id="zipcode"
           placeholder="Zip Code"
           type="number"
         />
-        <button class="item col-1" id="submit">submit</button>
+        <button class="item col-4 col-sm-3 text-center" id="submit">
+          submit
+        </button>
       </div>
-      <div id="outputContainer"></div>
+      <div id="outputContainer" class="row justify-content-center"></div>
       <div class="footer"></div>
     </div>
   </body>
