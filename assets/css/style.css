@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+.appContainer {
+  font-family: 'Raleway', sans-serif;
+}
+.appTitle {
+  font-size: 50px;
+  color: rgb(17, 64, 135);
+  padding: 1rem;
+  line-height: normal;
+}
+.categories {
+  font-size: 20px;
+}
+.restaurantCategory {
+  font-size: 20px;
+}
+.restaurantItem {
+  font-size: 20px;
+  cursor: pointer;
+}
+.restaurantItem:hover, .restaurantItemSelection:hover {
+  color: #114f8e;
+}
+.restaurantItemSelection {
+  font-size: 40px;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+#randomButton, #submit {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 4%) 0 1px 0, rgb(255 255 255 / 25%) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+#randomButton:hover, #submit:hover {
+  background-color: #dedede;
+}
+.restaurantImage {
+  width: 90%;
+  height: 40%;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
