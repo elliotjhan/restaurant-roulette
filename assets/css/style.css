@@ -2,6 +2,9 @@
 .appContainer {
   font-family: 'Raleway', sans-serif;
 }
+.outputContainer {
+  padding: 21px;
+}
 .appTitle {
   font-size: 50px;
   color: rgb(17, 64, 135);
