@@ -10,7 +10,7 @@ export default class List {
   }
 
   generateList() {
-    fetch("http://localhost:3000/categories", {
+    fetch("http://localhost:3001/categories", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export default class List {
     let location = document.querySelector("#zipcode").value;
     if (!categories || !location) return null;
     if ((location + "").length !== 5) return null;
-    fetch("http://localhost:3000/restaurants", {
+    fetch("http://localhost:3001/restaurants", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -88,7 +88,8 @@ export default class List {
   createRandomButton() {
     let button = document.createElement("button");
     button.setAttribute("id", "randomButton");
-    button.innerHTML += "random";
+    button.setAttribute("class", "col-sm-1");
+    button.innerHTML += "Pick For Me!";
     button.addEventListener("click", () => this.pickRestaurant());
     document.querySelector("#outputContainer").appendChild(button);
   }
@@ -102,8 +103,12 @@ export default class List {
         restaurantItems[0].parentNode.removeChild(restaurantItems[0]);
       }
     }
-    let button = document.querySelector("#randomButton");
+    let button = document.querySelector("#randomButton"); //code below checks and clears for already randomized restaurant
+    let outputTitle = document.querySelector(".restaurantItemSelection");
+    let outputImage = document.querySelector(".restaurantImage");
     if (button) button.remove();
+    if (outputTitle) outputTitle.remove();
+    if (outputImage) outputImage.remove();
   }
 
   pickRestaurant() {
@@ -113,20 +118,25 @@ export default class List {
     let restaurantName = document.createElement("div");
     restaurantName.setAttribute(
       "class",
-      "restaurantItemSelection col-12 text-center"
+      "restaurantItemSelection col-12 text-start"
     );
     restaurantName.addEventListener("click", () =>
       this.linkToURL(selection.url)
     );
     restaurantName.innerHTML += selection.name; //name of the restaurant
+    let restaurantImageContainer = document.createElement("div");
+    restaurantImageContainer.setAttribute("class", "col-sm-12");
     let restaurantImage = document.createElement("img");
     restaurantImage.setAttribute("src", selection.image_url);
-    restaurantImage.setAttribute("class", "restaurantImage col-12");
+    restaurantImage.setAttribute("class", "restaurantImage pointer");
     restaurantImage.addEventListener("click", () =>
       this.linkToURL(selection.url)
     );
     document.querySelector("#outputContainer").appendChild(restaurantName);
-    document.querySelector("#outputContainer").appendChild(restaurantImage);
+    restaurantImageContainer.appendChild(restaurantImage);
+    document
+      .querySelector("#outputContainer")
+      .appendChild(restaurantImageContainer);
   }
 
   linkToURL(url) {
