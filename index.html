@@ -13,16 +13,15 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script type="module" src="./assets/js/main.js" async></script>
   </head>
   <body>
     <div class="container-fluid appContainer">
       <div class="appTitle row justify-content-start">
-        <div class="col text-start">Restaurant Roulette</div>
+        <div class="col-xs-12 col-sm-12 text-start">Restaurant Roulette</div>
       </div>
       <div id="inputContainer" class="row justify-content-center">
         <select
-          class="categories col-10 col-sm-6 mb-3"
+          class="categories col-10 col-sm-5"
           name="categories"
           id="categories"
           size="1"
@@ -30,17 +29,19 @@
           <option selected="true" disabled>Category</option>
         </select>
         <input
-          class="item col-6 col-sm-3"
+          class="item col-6 col-sm-1"
           id="zipcode"
           placeholder="Zip Code"
           type="number"
         />
-        <button class="item col-4 col-sm-3 text-center" id="submit">
+        <button class="item col-4 col-sm-1 text-center" id="submit">
           submit
         </button>
+        <div class="col-sm-5"></div>
       </div>
-      <div id="outputContainer" class="row justify-content-center"></div>
+      <div id="outputContainer" class="row justify-content-start"></div>
       <div class="footer"></div>
     </div>
+    <script type="module" src="./assets/js/main.js" async></script>
   </body>
 </html>
