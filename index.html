@@ -16,28 +16,47 @@
   </head>
   <body>
     <div class="container-fluid appContainer">
-      <div class="appTitle row justify-content-start">
-        <div class="col-xs-12 col-sm-12 text-start">Restaurant Roulette</div>
+      <div
+        class="header row align-items-center justify-content-center text-center"
+      >
+        <div class="col">Home</div>
+        <div class="col">About</div>
+        <div class="col">Contact</div>
       </div>
-      <div id="inputContainer" class="row justify-content-center">
-        <select
-          class="categories col-10 col-sm-5"
-          name="categories"
-          id="categories"
-          size="1"
-        >
-          <option selected="true" disabled>Category</option>
-        </select>
-        <input
-          class="item col-6 col-sm-1"
-          id="zipcode"
-          placeholder="Zip Code"
-          type="number"
-        />
-        <button class="item col-4 col-sm-1 text-center" id="submit">
-          submit
-        </button>
-        <div class="col-sm-5"></div>
+      <div class="homeText row justify-content-start">
+        <div class="homeTextTitle col-xs-12 col-sm-12 text-start">
+          Restaurant Roulette
+        </div>
+        <div class="homeTextSmall col-xs-12 col-sm-12 text-start">
+          Can't decide what to eat? Just put in your preferences and let us pick
+          for you!
+        </div>
+      </div>
+      <div class="icon"></div>
+      <div id="inputContainer">
+        <div class="row">
+          <select
+            class="categories col-10 col-sm-2"
+            name="categories"
+            id="categories"
+            size="1"
+          >
+            <option selected="true" disabled>Category</option>
+          </select>
+        </div>
+        <div class="row">
+          <input
+            class="item col-6 col-sm-1"
+            id="zipcode"
+            placeholder="Zip Code"
+            type="number"
+          />
+        </div>
+        <div class="row">
+          <button class="item col-4 col-sm-1 text-center" id="submit">
+            submit
+          </button>
+        </div>
       </div>
       <div id="outputContainer" class="row justify-content-start"></div>
       <div class="footer"></div>
