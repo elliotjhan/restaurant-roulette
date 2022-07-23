@@ -8,11 +8,30 @@
 .outputContainer {
   padding: 21px;
 }
-.appTitle {
-  font-size: 50px;
-  color: rgb(17, 64, 135);
-  padding: 1rem;
-  line-height: normal;
+#inputContainer {
+  padding-left: 10vw;
+  padding-top: 5vh;
+}
+.homeText {
+  padding-top: 20vh;
+  padding-left: 10vw;
+}
+.homeTextTitle {
+  font-size: 3vw;
+}
+.homeTextSmall {
+  font-size: 1vw;
+}
+.icon {
+  background-image: url('./../images/yelp.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 20vw;
+  position: absolute;
+  right: 20%;
+  top: 10%;
 }
 .categories {
   font-size: 20px;
@@ -31,6 +50,9 @@
   font-size: 40px;
   cursor: pointer;
   padding: 1rem 0;
+}
+.header {
+  height: 7vh;
 }
 #randomButton, #submit {
   appearance: none;
@@ -68,6 +90,5 @@
 @media screen and (max-width: 576px) {
   .restaurantImage {
     width: 90%;
-    height: 40%;
   }
 }
